@@ -1,0 +1,17 @@
+{
+  "name": "user/quick.start",
+  "scripts": {
+    "phpcs": "./vendor/bin/phpcs --colors --standard=PSR12 src/",
+    "phpmd": "./vendor/bin/phpmd src/ text cleancode,codesize,controversial,design,naming,unusedcode"
+  },
+  "authors": [
+    {
+      "name": "Dmitriy Rudenskiy",
+      "email": "dmitriy.rudenskiy@gmail.com"
+    }
+  ],
+  "require": {
+    "phpmd/phpmd": "@stable",
+    "squizlabs/php_codesniffer": "@stable"
+  }
+}
