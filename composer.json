@@ -11,6 +11,8 @@
     }
   ],
   "require": {
+    "swiftmailer/swiftmailer": "^6.0",
+    "twig/twig":"^2.0",
     "phpmd/phpmd": "@stable",
     "squizlabs/php_codesniffer": "@stable"
   }

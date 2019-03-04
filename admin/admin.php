@@ -1,6 +1,6 @@
 <?php
 //Список пользователей
-$pdo = new PDO("mysql:host=localhost;dbname=orders", 'root', '');
+$pdo = new PDO("mysql:host=localhost;dbname=orders", 'root', 1234);
 $query = $pdo->prepare("Select * from users");
 $query->execute();
 $usersList = $query->fetchAll(PDO::FETCH_ASSOC);
