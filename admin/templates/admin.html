@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h3>Наши клиенты</h3>
+<ul>
+    {% for user in users %}
+    <li><span style="margin-right: 20px">{{ user['name'] }}</span><span
+            style="margin-right: 20px">{{ user['phone'] }}</span><span>{{ user['email'] }}</span></li>
+    {% endfor %}
+</ul>
+<h3>Список заказов</h3>
+<table style="border: 1px solid; text-align: center; padding: 5px; border-collapse: collapse;">
+    <tbody>
+    <tr>
+        <th style="border: 1px solid; text-align: center; padding: 5px;">Номер заказа</th>
+        <th style="border: 1px solid; text-align: center; padding: 5px;">Имя</th>
+        <th style="border: 1px solid; text-align: center; padding: 5px;">Телефон</th>
+        <th style="border: 1px solid; text-align: center; padding: 5px;">Почта</th>
+        <th style="border: 1px solid; text-align: center; padding: 5px;">Улица</th>
+        <th style="border: 1px solid; text-align: center; padding: 5px;">Дом</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td style="border: 1px solid; text-align: center; padding: 5px; border-collapse: collapse">{{ order['Order number'] }}
+        </td>
+        <td style="border: 1px solid; text-align: center; padding: 5px; border-collapse: collapse">{{ order['name'] }}
+        </td>
+        <td style="border: 1px solid; text-align: center; padding: 5px; border-collapse: collapse">{{ order['phone'] }}
+        </td>
+        <td style="border: 1px solid; text-align: center; padding: 5px; border-collapse: collapse">{{ order['email'] }}
+        </td>
+        <td style="border: 1px solid; text-align: center; padding: 5px; border-collapse: collapse">
+            {{ order['street'] }}
+        </td>
+        <td style="border: 1px solid; text-align: center; padding: 5px; border-collapse: collapse">{{ order['home'] }}
+        </td>
+    </tr>
+    {% endfor %}
+</body>
+</html>
